@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.search-input {
+   @apply flex items-center pl-4 pr-4  bg-blue-50 rounded h-8 m-auto;
+}
+
+.navli {
+   @apply pl-4 pr-4 flex flex-col justify-center items-center;
+}
+
+.nav-a {
+   @apply text-xs text-gray-600 hover:text-gray-900;
+}
+
+.nav-svg {
+   @apply h-6 text-gray-600 hover:text-gray-900;
+}
