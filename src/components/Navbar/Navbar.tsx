@@ -4,11 +4,11 @@ import { NavbarProfileDropDown } from "./NavbarProfileDropDown";
 
 interface NavbarProps {
    pageWidth: number;
+   more: boolean;
+   setMore: any;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ pageWidth }) => {
-   console.log(pageWidth);
-
+export const Navbar: React.FC<NavbarProps> = ({ pageWidth, more, setMore }) => {
    // profile dropdown toggle state
    const [profileDropdown, SetProfileDropDown] = useState<boolean>(false);
 
@@ -179,7 +179,10 @@ export const Navbar: React.FC<NavbarProps> = ({ pageWidth }) => {
                      </div>
                   </li>
 
-                  <li className="navli cursor-pointer">
+                  <li
+                     onClick={() => setMore((prevSetMore) => !prevSetMore)}
+                     className="navli cursor-pointer"
+                  >
                      <svg
                         className="nav-svg"
                         xmlns="http://www.w3.org/2000/svg"
@@ -208,6 +211,7 @@ export const Navbar: React.FC<NavbarProps> = ({ pageWidth }) => {
                   </li>
                </ul>
             ) : (
+               // Mobile burger menu
                <svg
                   className="h-8 mr-5 cursor-pointer"
                   xmlns="http://www.w3.org/2000/svg"

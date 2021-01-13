@@ -6,6 +6,7 @@ export const useResize = (myRef: any) => {
 
    useEffect(() => {
       setWidth(myRef.current.offsetWidth);
+      setHeight(myRef.current.offsetHeight);
       const handleResize = () => {
          setWidth(myRef.current.offsetWidth);
          setHeight(myRef.current.offsetHeight);
