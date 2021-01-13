@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import { useCtx } from "../../store/GlobalStore";
 import { useOutsideAlerter } from "../../utils/useOutSideAlerter";
 
-interface MoreProps {
-   setMore: any;
-}
+interface MoreProps {}
 
 let easing = [0.175, 0.85, 0.42, 0.96];
 
@@ -21,9 +20,19 @@ const BoxVariants = {
    },
 };
 
-export const More: React.FC<MoreProps> = ({ setMore }) => {
+export const More: React.FC<MoreProps> = () => {
+   // Calling the store
+   const { state, dispatch } = useCtx();
+
+   //  Toggle more action
+   const toggleMoreAction = () => {
+      dispatch({
+         type: "TOGGLE_MORE",
+      });
+   };
+
    const wrapperRef = useRef<any>(null);
-   const { close } = useOutsideAlerter(wrapperRef);
+   useOutsideAlerter(wrapperRef);
    return (
       <section className="absolute h-full w-full bg-black bg-opacity-60 ">
          <motion.div
@@ -36,7 +45,7 @@ export const More: React.FC<MoreProps> = ({ setMore }) => {
          >
             <div className="px-3 py-6 ">
                <svg
-                  onClick={() => setMore((prevSetMore) => !prevSetMore)}
+                  onClick={toggleMoreAction}
                   className="h-11 text-gray-600 ml-auto rounded-full transform transition duration-75 hover:bg-gray-50 p-2 cursor-pointer"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

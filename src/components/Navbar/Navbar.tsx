@@ -1,14 +1,14 @@
+import { type } from "os";
 import { useRef, useState } from "react";
+import { useCtx } from "../../store/GlobalStore";
 import { useResize } from "../../utils/useResizer";
 import { NavbarProfileDropDown } from "./NavbarProfileDropDown";
 
 interface NavbarProps {
    pageWidth: number;
-   more: boolean;
-   setMore: any;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ pageWidth, more, setMore }) => {
+export const Navbar: React.FC<NavbarProps> = ({ pageWidth }) => {
    // profile dropdown toggle state
    const [profileDropdown, SetProfileDropDown] = useState<boolean>(false);
 
@@ -18,6 +18,16 @@ export const Navbar: React.FC<NavbarProps> = ({ pageWidth, more, setMore }) => {
    // Handle inoutRef Click
    const handleInputRefClick = () => {
       inputRef.current.focus();
+   };
+
+   // Calling the global state
+   const { state, dispatch } = useCtx();
+   console.log(state);
+
+   const handleToggleMore = () => {
+      dispatch({
+         type: "TOGGLE_MORE",
+      });
    };
 
    return (
@@ -132,7 +142,7 @@ export const Navbar: React.FC<NavbarProps> = ({ pageWidth, more, setMore }) => {
                      </a>
                   </li>
 
-                  {/*  --------------------- my account drop down  ------------------------*/}
+                  {/*  ------------- my account drop down  ------------*/}
 
                   <li
                      className="navli border-solid border-r"
@@ -180,7 +190,7 @@ export const Navbar: React.FC<NavbarProps> = ({ pageWidth, more, setMore }) => {
                   </li>
 
                   <li
-                     onClick={() => setMore((prevSetMore) => !prevSetMore)}
+                     onClick={handleToggleMore}
                      className="navli cursor-pointer"
                   >
                      <svg

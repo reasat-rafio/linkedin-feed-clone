@@ -1,13 +1,14 @@
 import { useEffect } from "react";
+import { useCtx } from "../store/GlobalStore";
 
 export const useOutsideAlerter = (ref) => {
+   const { dispatch } = useCtx();
    useEffect(() => {
-      /**
-       * Alert if clicked on outside of element
-       */
       function handleClickOutside(event) {
          if (ref.current && !ref.current.contains(event.target)) {
-            alert("You clicked outside of me!");
+            dispatch({
+               type: "TOGGLE_MORE",
+            });
          }
       }
 

@@ -97,4 +97,3 @@ export const NavbarProfileDropDown: React.FC<NavbarProfileDropDownProps> = ({}) 
       </>
    );
 };
-// hover:border-b hover:border-gray-600
