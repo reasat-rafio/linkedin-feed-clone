@@ -7,7 +7,7 @@
 }
 
 .navli {
-   @apply sm:px-1 md:px-3  flex flex-col justify-center items-center;
+   @apply sm:px-1 md:px-3  flex flex-col justify-center items-center cursor-pointer;
 }
 
 .nav-a {
@@ -15,5 +15,5 @@
 }
 
 .nav-svg {
-   @apply lg:h-6 md:h-4 text-gray-600 hover:text-gray-900;
+   @apply h-6 text-gray-600 hover:text-gray-900;
 }

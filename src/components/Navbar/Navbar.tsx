@@ -75,9 +75,11 @@ export const Navbar: React.FC<NavbarProps> = ({ pageWidth }) => {
                      >
                         <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                      </svg>
-                     <a className="nav-a " href="#home">
-                        Home
-                     </a>
+                     {pageWidth > 1330 && (
+                        <a className="nav-a " href="#home">
+                           Home
+                        </a>
+                     )}
                   </li>
                   <li className="navli">
                      <svg
@@ -88,9 +90,12 @@ export const Navbar: React.FC<NavbarProps> = ({ pageWidth }) => {
                      >
                         <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
                      </svg>
-                     <a className="nav-a text-center" href="#my-network">
-                        My Network
-                     </a>
+
+                     {pageWidth > 1330 && (
+                        <a className="nav-a text-center" href="#my-network">
+                           My Network
+                        </a>
+                     )}
                   </li>
                   <li className="navli">
                      <svg
@@ -106,9 +111,12 @@ export const Navbar: React.FC<NavbarProps> = ({ pageWidth }) => {
                         />
                         <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
                      </svg>
-                     <a className="nav-a" href="#">
-                        Jobs
-                     </a>
+
+                     {pageWidth > 1330 && (
+                        <a className="nav-a" href="#">
+                           Jobs
+                        </a>
+                     )}
                   </li>
                   <li className="navli">
                      <svg
@@ -123,9 +131,12 @@ export const Navbar: React.FC<NavbarProps> = ({ pageWidth }) => {
                            clipRule="evenodd"
                         />
                      </svg>
-                     <a className="nav-a" href="#">
-                        Messaging
-                     </a>
+
+                     {pageWidth > 1330 && (
+                        <a className="nav-a" href="#">
+                           Messaging
+                        </a>
+                     )}
                   </li>
                   <li className="navli">
                      <svg
@@ -137,9 +148,11 @@ export const Navbar: React.FC<NavbarProps> = ({ pageWidth }) => {
                         <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
                      </svg>
 
-                     <a className="nav-a" href="#">
-                        Notifications
-                     </a>
+                     {pageWidth > 1330 && (
+                        <a className="nav-a" href="#">
+                           Notifications
+                        </a>
+                     )}
                   </li>
 
                   {/*  ------------- my account drop down  ------------*/}
@@ -207,6 +220,20 @@ export const Navbar: React.FC<NavbarProps> = ({ pageWidth }) => {
                            d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"
                         />
                      </svg>
+                     <button className="relative m-auto z-10 block rounded bg-white focus:outline-none">
+                        <svg
+                           className="h-5 w-5 text-gray-800"
+                           xmlns="http://www.w3.org/2000/svg"
+                           viewBox="0 0 20 20"
+                           fill="currentColor"
+                        >
+                           <path
+                              fillRule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clipRule="evenodd"
+                           />
+                        </svg>
+                     </button>
                   </li>
 
                   <li

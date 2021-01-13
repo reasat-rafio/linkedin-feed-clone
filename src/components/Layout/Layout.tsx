@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { useCtx } from "../../store/GlobalStore";
 import { useResize } from "../../utils/useResizer";
-import { More } from "../Navbar/More";
+import { More } from "../More/More";
 import { Navbar } from "../Navbar/Navbar";
 
 interface LayoutProps {}

@@ -10,7 +10,7 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
          </Head>
 
-         <main className="pt-20 lg:w-3/5 m-auto"></main>
+         <main className="pt-30 lg:w-3/5 m-auto"></main>
 
          <footer></footer>
       </div>
