@@ -92,7 +92,10 @@ export const More: React.FC<MoreProps> = () => {
                   </h2>
                   <ul className="p-3">
                      {Servicrs.map((sr, i) => (
-                        <li className="my-2 transition transform ease-in duration-100 hover:bg-gray-500 hover:bg-opacity-5">
+                        <li
+                           key={i}
+                           className="my-2 transition transform ease-in duration-100 hover:bg-gray-500 hover:bg-opacity-5"
+                        >
                            <a href="#">
                               <span className="text-sm font-semibold block">
                                  {sr.title}

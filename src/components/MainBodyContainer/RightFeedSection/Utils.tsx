@@ -48,3 +48,15 @@ export const mostViewdCourse = [
       subTitle: "Backi Saltzman",
    },
 ];
+
+export const Navs = [
+   "About",
+   "Accessibility",
+   "Help Center",
+   "Privacy & Terms",
+   "AD Choices",
+   "Advertising",
+   "Business Services",
+   "Get the LinkedIn app",
+   "More",
+];

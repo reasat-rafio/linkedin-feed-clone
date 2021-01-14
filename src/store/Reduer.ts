@@ -10,6 +10,11 @@ export const Reducer = (state, action: actionInterface) => {
             ...state,
             openMore: !state.openMore,
          };
+      case "TOGGLE_MODAL":
+         return {
+            ...state,
+            openModal: !state.openModal,
+         };
 
       default:
          console.log(action.type);

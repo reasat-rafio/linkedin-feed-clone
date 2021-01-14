@@ -1,6 +1,6 @@
 interface RightFeedSectionProps {}
 import { BsFillInfoSquareFill } from "react-icons/bs";
-import { addToYourFeed, mostViewdCourse } from "./Utils";
+import { addToYourFeed, mostViewdCourse, Navs } from "./Utils";
 import { AiOutlinePlus } from "react-icons/ai";
 
 export const RightFeedSection: React.FC<RightFeedSectionProps> = ({}) => {
@@ -58,7 +58,10 @@ export const RightFeedSection: React.FC<RightFeedSectionProps> = ({}) => {
                </div>
                <ul>
                   {mostViewdCourse.map((m, i) => (
-                     <li className="px-3 py-1  mb-1 cursor-pointertransform translate duration-75 ease-in  hover:bg-gray-500 hover:bg-opacity-10 cursor-pointer">
+                     <li
+                        key={i}
+                        className="px-3 py-1  mb-1 cursor-pointertransform translate duration-75 ease-in  hover:bg-gray-500 hover:bg-opacity-10 cursor-pointer"
+                     >
                         <span className="block text-sm font-semibold">
                            {m.title}
                         </span>
@@ -78,7 +81,7 @@ export const RightFeedSection: React.FC<RightFeedSectionProps> = ({}) => {
          </section>
 
          {/* Bottom Section */}
-         <section className="">
+         <section className="sticky top-2">
             {/* img */}
             <div className="bg-white mt-3 border-solid border rounded-lg shadow-md overflow-hidden p-2 cursor-pointer">
                <img
@@ -87,6 +90,19 @@ export const RightFeedSection: React.FC<RightFeedSectionProps> = ({}) => {
                   alt="pic"
                />
             </div>
+
+            <ul className="grid grid-cols-3 justify-center mt-4 px-4  items-center">
+               {Navs.map((n, i) => (
+                  <li
+                     className="m-1 text-xs flex justify-center items-center text-gray-600 border-solid border-b hover:border-black"
+                     key={i}
+                  >
+                     <a className="m-auto" href={`#${n}`}>
+                        {n}
+                     </a>
+                  </li>
+               ))}
+            </ul>
          </section>
       </div>
    );
