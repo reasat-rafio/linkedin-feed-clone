@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { MainBodyContainer } from "../components/MainBodyContainer/MainBodyContainer";
 
 import { Navbar } from "../components/Navbar/Navbar";
 
@@ -10,7 +11,9 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
          </Head>
 
-         <main className="pt-30 lg:w-3/5 m-auto"></main>
+         <main className="pt-28 lg:w-2/3 m-auto">
+            <MainBodyContainer />
+         </main>
 
          <footer></footer>
       </div>

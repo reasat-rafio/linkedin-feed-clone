@@ -31,7 +31,7 @@ export const Navbar: React.FC<NavbarProps> = ({ pageWidth }) => {
    };
 
    return (
-      <nav className="lg:w-3/5 m-auto flex items-center z-20">
+      <nav className="lg:w-2/3 m-auto flex items-center z-20">
          {/* Logo & Search input */}
 
          <div className="">
