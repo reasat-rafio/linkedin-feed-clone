@@ -1,3 +1,4 @@
+import { RightFeedSection } from "../RightFeedSection/RightFeedSection";
 import { LeftFeedSection } from "./LeftFeed/LeftFeedSection";
 
 interface MainBodyContainerProps {}
@@ -9,7 +10,9 @@ export const MainBodyContainer: React.FC<MainBodyContainerProps> = ({}) => {
             <LeftFeedSection />
          </section>
          <section className="col-span-5">5</section>
-         <section className="col-span-3">3</section>
+         <section className="col-span-3">
+            <RightFeedSection />
+         </section>
       </div>
    );
 };

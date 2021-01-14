@@ -10,17 +10,17 @@ export const LeftFeedSection: React.FC<LeftFeedSectionProps> = ({}) => {
    const [hidden, setHidden] = useState<boolean>(true);
    const [followedHashtags, setFollowedHashtags] = useState<boolean>(true);
 
-   const GetTopheightRef = useRef(null);
-   const [height, setHeight] = useState(0);
+   // const GetTopheightRef = useRef(null);
+   // const [height, setHeight] = useState(0);
 
-   useEffect(() => {
-      setHeight(GetTopheightRef.current.offsetTop);
-   }, []);
+   // useEffect(() => {
+   //    setHeight(GetTopheightRef.current.offsetTop);
+   // }, []);
 
    return (
-      <div className="relative">
+      <div className="">
          {/* Profile section */}
-         <div className="border-solid border bg-white overflow-hidden rounded-lg shadow-md">
+         <section className="border-solid border bg-white overflow-hidden rounded-lg shadow-md">
             <img
                className="h-16 w-full object-cover"
                src="https://images.unsplash.com/photo-1610208311724-72e7baf69795?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
@@ -42,8 +42,8 @@ export const LeftFeedSection: React.FC<LeftFeedSectionProps> = ({}) => {
                </h2>
             </div>
 
-            <ul className="border-solid border-b">
-               <li className="px-3 py-1 cursor-pointer flex justify-center items-center my-2 transform translate duration-75 ease-in  hover:bg-gray-500 hover:bg-opacity-10">
+            <ul className="border-solid border-b ">
+               <li className="px-3 py-1 cursor-pointer flex justify-center items-center my-2 transform translate duration-75 ease-in  hover:bg-gray-500 hover:bg-opacity-10 ">
                   <div className="flex-1">
                      <span className="block text-xs font-semibold text-gray-600">
                         Connections
@@ -75,13 +75,10 @@ export const LeftFeedSection: React.FC<LeftFeedSectionProps> = ({}) => {
                   </span>
                </li>
             </div>
-         </div>
+         </section>
 
          {/* Bottom card */}
-         <div
-            ref={GetTopheightRef}
-            className="border-solid border mt-3 rounded-lg shadow-md bg-white  "
-         >
+         <section className="border-solid border mt-3 rounded-lg shadow-md bg-white  ">
             <div className="flex p-3 ">
                <h2 className="flex-1 text-sm ">Followed hastags</h2>
                <button
@@ -124,10 +121,10 @@ export const LeftFeedSection: React.FC<LeftFeedSectionProps> = ({}) => {
                   ))}
             </ul>
 
-            <div className="flex justify-center items-center  transform translate duration-75 ease-in  hover:bg-gray-500 hover:bg-opacity-10 cursor-pointer">
+            <div className="flex justify-center items-center  transform translate duration-75 ease-in  hover:bg-gray-500 hover:bg-opacity-10 cursor-pointer z-0">
                <h1 className="p-3 text-sm font-semibold">Discorver more</h1>
             </div>
-         </div>
+         </section>
       </div>
    );
 };

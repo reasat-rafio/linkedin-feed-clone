@@ -35,9 +35,9 @@ export const More: React.FC<MoreProps> = () => {
    const wrapperRef = useRef<any>(null);
    useOutsideAlerter(wrapperRef);
    return (
-      <section className="absolute h-full w-full bg-black bg-opacity-60 ">
+      <section className="absolute  h-screen overflow-x-hidden  w-full bg-black bg-opacity-60 mt-10 z-30">
          <motion.div
-            className="absolute h-full right-0 w-96   rounded-lg bg-white  shadow-xl"
+            className="absolute right-0 w-96  h-full rounded-lg bg-white  shadow-xl overflow-scroll"
             initial="exit"
             animate="enter"
             exit="exit"
@@ -73,7 +73,7 @@ export const More: React.FC<MoreProps> = () => {
                      {Icons.map((ic, index) => (
                         <div
                            key={index}
-                           className="grid-cols-1 flex flex-col justify-center items-center "
+                           className="grid-cols-1 flex flex-col justify-center items-center cursor-pointer"
                         >
                            <div className="text-3xl border-solid border p-1 rounded-md shadow">
                               {ic.icon}
