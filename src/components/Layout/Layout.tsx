@@ -19,9 +19,9 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
    } = useCtx();
 
    return (
-      <>
+      <div>
          <header
-            className="w-full bg-white shadow-sm fixed top-0"
+            className="w-full bg-white shadow-sm fixed top-0 z-50"
             ref={pageRef}
          >
             <Navbar pageWidth={width} />
@@ -29,6 +29,6 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
          {openMore && <More />}
 
          {children}
-      </>
+      </div>
    );
 };

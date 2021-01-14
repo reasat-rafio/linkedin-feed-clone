@@ -1,12 +1,26 @@
 import { RiBookmarkFill } from "react-icons/ri";
+import { AiOutlineArrowUp, AiOutlineArrowDown } from "react-icons/ai";
+import { useRef, useState, useEffect } from "react";
+import { Recent, recentHastags } from "./Recent";
+import { HelperFn } from "./HelperFn";
 
 interface LeftFeedSectionProps {}
 
 export const LeftFeedSection: React.FC<LeftFeedSectionProps> = ({}) => {
+   const [hidden, setHidden] = useState<boolean>(true);
+   const [followedHashtags, setFollowedHashtags] = useState<boolean>(true);
+
+   const GetTopheightRef = useRef(null);
+   const [height, setHeight] = useState(0);
+
+   useEffect(() => {
+      setHeight(GetTopheightRef.current.offsetTop);
+   }, []);
+
    return (
-      <div>
+      <div className="relative">
          {/* Profile section */}
-         <section className="border-solid border rounded-lg overflow-hidden shadow-sm ">
+         <div className="border-solid border bg-white overflow-hidden rounded-lg shadow-md">
             <img
                className="h-16 w-full object-cover"
                src="https://images.unsplash.com/photo-1610208311724-72e7baf69795?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
@@ -61,7 +75,59 @@ export const LeftFeedSection: React.FC<LeftFeedSectionProps> = ({}) => {
                   </span>
                </li>
             </div>
-         </section>
+         </div>
+
+         {/* Bottom card */}
+         <div
+            ref={GetTopheightRef}
+            className="border-solid border mt-3 rounded-lg shadow-md bg-white  "
+         >
+            <div className="flex p-3 ">
+               <h2 className="flex-1 text-sm ">Followed hastags</h2>
+               <button
+                  onClick={() => setHidden((prevHdn) => !prevHdn)}
+                  className="rounded-full transform transition duration-100 ease-in hover:bg-opacity-10  hover:bg-gray-800 p-1 "
+                  style={{ outline: "none" }}
+               >
+                  {hidden ? (
+                     <AiOutlineArrowDown className="" />
+                  ) : (
+                     <AiOutlineArrowUp />
+                  )}
+               </button>
+            </div>
+            <ul>
+               {hidden &&
+                  Recent.map((r, i) => (
+                     <HelperFn key={i} icon={r.icon} text={r.text} />
+                  ))}
+            </ul>
+
+            <div className="flex p-3  ">
+               <h2 className="flex-1 text-sm ">Recent</h2>
+               <button
+                  onClick={() => setFollowedHashtags((prevHdn) => !prevHdn)}
+                  className="rounded-full transform transition duration-100 ease-in hover:bg-opacity-10  hover:bg-gray-800 p-1 "
+                  style={{ outline: "none" }}
+               >
+                  {followedHashtags ? (
+                     <AiOutlineArrowDown className="" />
+                  ) : (
+                     <AiOutlineArrowUp />
+                  )}
+               </button>
+            </div>
+            <ul className="border-solid border-b pb-3">
+               {followedHashtags &&
+                  recentHastags.map((r, i) => (
+                     <HelperFn key={i} icon={r.icon} text={r.text} />
+                  ))}
+            </ul>
+
+            <div className="flex justify-center items-center  transform translate duration-75 ease-in  hover:bg-gray-500 hover:bg-opacity-10 cursor-pointer">
+               <h1 className="p-3 text-sm font-semibold">Discorver more</h1>
+            </div>
+         </div>
       </div>
    );
 };

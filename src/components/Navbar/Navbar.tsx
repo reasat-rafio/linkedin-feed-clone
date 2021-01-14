@@ -22,7 +22,6 @@ export const Navbar: React.FC<NavbarProps> = ({ pageWidth }) => {
 
    // Calling the global state
    const { state, dispatch } = useCtx();
-   console.log(state);
 
    const handleToggleMore = () => {
       dispatch({
@@ -31,7 +30,7 @@ export const Navbar: React.FC<NavbarProps> = ({ pageWidth }) => {
    };
 
    return (
-      <nav className="lg:w-2/3 m-auto flex items-center z-20">
+      <nav className="lg:w-2/3 m-auto flex items-center ">
          {/* Logo & Search input */}
 
          <div className="">
@@ -256,9 +255,9 @@ export const Navbar: React.FC<NavbarProps> = ({ pageWidth }) => {
                   fill="currentColor"
                >
                   <path
-                     fill-rule="evenodd"
+                     fillRule="evenodd"
                      d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                     clip-rule="evenodd"
+                     clipRule="evenodd"
                   />
                </svg>
             )}

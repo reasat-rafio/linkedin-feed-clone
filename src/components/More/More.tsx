@@ -3,7 +3,6 @@ import { useRef } from "react";
 import { useCtx } from "../../store/GlobalStore";
 import { useOutsideAlerter } from "../../utils/useOutSideAlerter";
 import { Icons, Servicrs } from "./Utils";
-console.log(Icons);
 
 interface MoreProps {}
 
