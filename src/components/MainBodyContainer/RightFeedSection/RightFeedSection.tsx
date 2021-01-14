@@ -23,7 +23,7 @@ export const RightFeedSection: React.FC<RightFeedSectionProps> = ({}) => {
                         className="grid grid-cols-10 gap-1 mb-2 cursor-pointer"
                      >
                         <span className="col-span-2">{a.icon}</span>
-                        <div className="col-span-5 ">
+                        <div className=" lg:col-span-5  sm:col-span-4">
                            <span className=" text-sm font-bold block">
                               {a.titile}
                            </span>
@@ -32,14 +32,14 @@ export const RightFeedSection: React.FC<RightFeedSectionProps> = ({}) => {
                            </span>
                         </div>
 
-                        <button className="col-span-3 flex m-auto lg:px-3 lg:py-1 md:px-2 md:py-1  justify-center items-center border-solid border border-blue-700 text-blue-700 font-bold  rounded-full hover:bg-opacity-20 hover:bg-blue-600 ">
-                           <AiOutlinePlus />
-                           <p className="text-sm">Follow</p>
+                        <button className="lg:col-span-3 sm:col-span-4 flex m-auto lg:px-3 lg:py-1 md:px-2 md:py-1  justify-center items-center border-solid border border-blue-700 text-blue-700 font-bold  rounded-full hover:bg-opacity-20 hover:bg-blue-600 w-20">
+                           <AiOutlinePlus className="sm:hidden  md:hidden lg:block" />
+                           <p className="text-xs">Follow</p>
                         </button>
                      </li>
                   ))}
                </ul>
-               <div className="px-3 pb-3">
+               <div className="px-3 pb-3 flex">
                   <h2 className="text-sm font-bold text-blue-700 p-1 hover:bg-opacity-20 hover:bg-blue-600 rounded transition transform duration-200 ease cursor-pointer">
                      View all recommendations
                   </h2>
@@ -72,7 +72,7 @@ export const RightFeedSection: React.FC<RightFeedSectionProps> = ({}) => {
                   ))}
                </ul>
 
-               <div className="px-3 pb-3">
+               <div className="px-3 pb-3 flex">
                   <h2 className="text-sm font-bold text-blue-700 p-1 hover:bg-opacity-20 hover:bg-blue-600 rounded transition transform duration-200 ease cursor-pointer">
                      Show more on LinkedIn Learning
                   </h2>

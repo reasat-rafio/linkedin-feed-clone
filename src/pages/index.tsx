@@ -1,8 +1,6 @@
 import Head from "next/head";
 import { MainBodyContainer } from "../components/MainBodyContainer/MainBodyContainer";
 
-import { Navbar } from "../components/Navbar/Navbar";
-
 export default function Home() {
    return (
       <div className="bg-gray-100">
@@ -11,7 +9,7 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
          </Head>
 
-         <main className="pt-28 lg:w-2/3 m-auto">
+         <main className="pt-20 xl:w-3/4 m-auto p-3">
             <MainBodyContainer />
          </main>
 

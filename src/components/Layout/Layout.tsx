@@ -27,7 +27,6 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
             <Navbar pageWidth={width} />
          </header>
          {openMore && <More />}
-
          {children}
       </div>
    );
