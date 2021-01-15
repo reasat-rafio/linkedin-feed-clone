@@ -40,7 +40,7 @@ export const More: React.FC<MoreProps> = () => {
          style={{ background: "rgba(0,0,0,.7)" }}
       >
          <motion.div
-            className="absolute right-0 w-96  h-full rounded-lg bg-white  shadow-xl overflow-scroll"
+            className="fixed right-0 w-96  h-full rounded-lg bg-white  shadow-xl overflow-scroll"
             initial="exit"
             animate="enter"
             exit="exit"
