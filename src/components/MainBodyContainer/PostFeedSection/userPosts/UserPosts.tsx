@@ -54,7 +54,7 @@ export const UserPosts: React.FC<UserPostsProps> = ({
             <p className="text-gray-800 text-sm mt-2 leading-normal md:leading-relaxed">
                {postBodyText}
             </p>
-            <div className="mt-2"> {postImage && postImage}</div>
+            <div className="mt-2 cursor-pointer"> {postImage && postImage}</div>
 
             {/* Icons */}
             <div className="text-gray-500 text-xs flex items-center mt-3 border-solid border-b pb-3">

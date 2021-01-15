@@ -8,7 +8,6 @@ interface MainBodyContainerProps {}
 
 export const MainBodyContainer: React.FC<MainBodyContainerProps> = ({}) => {
    const isBreakpoint = useMediaQuery(768);
-   console.log(isBreakpoint);
 
    return (
       <>
@@ -27,7 +26,8 @@ export const MainBodyContainer: React.FC<MainBodyContainerProps> = ({}) => {
                   <RightFeedSection />
                </section>
             )}
-            <MessageInboxFull />
+
+            {!isBreakpoint && <MessageInboxFull />}
          </div>
       </>
    );
