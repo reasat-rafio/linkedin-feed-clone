@@ -2,7 +2,7 @@ import { PostFeedSection } from "./PostFeedSection/PostFeedSection";
 import { RightFeedSection } from "./RightFeedSection/RightFeedSection";
 import { LeftFeedSection } from "./LeftFeed/LeftFeedSection";
 import { useMediaQuery } from "../../utils/useMediaQuery";
-import { MessageInbox } from "./MessageInbox/MessageInbox";
+import { MessageInboxFull } from "./MessageInbox/MessageInboxFull";
 
 interface MainBodyContainerProps {}
 
@@ -27,7 +27,7 @@ export const MainBodyContainer: React.FC<MainBodyContainerProps> = ({}) => {
                   <RightFeedSection />
                </section>
             )}
-            <MessageInbox />
+            <MessageInboxFull />
          </div>
       </>
    );
