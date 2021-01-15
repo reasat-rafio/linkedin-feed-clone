@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+   @apply antialiased;
+}
+
 .search-input {
    @apply flex items-center md:px-3  sm:px-1 bg-blue-50 rounded h-8 m-auto;
 }

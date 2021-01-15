@@ -37,7 +37,7 @@ export const MessageInboxFull: React.FC<MessageInboxProps> = ({}) => {
          variants={BoxVariants}
          className={`fixed mt-12 right-0 ${
             !showMore ? "h-14 bottom-0" : "h-full"
-         }  w-96  z-20  rounded-lg bg-white  shadow-2xl overflow-auto  transform transition duration-100 ease-in`}
+         }  w-80  z-20  rounded-lg bg-white  shadow-2xl overflow-auto  transform transition duration-100 ease-in`}
       >
          {/* Header */}
          <InboxHeader showMore={showMore} setShowMore={setShowMore} />
