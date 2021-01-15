@@ -20,7 +20,7 @@ export const LeftFeedSection: React.FC<LeftFeedSectionProps> = ({}) => {
    return (
       <div className="">
          {/* Profile section */}
-         <section className="border-solid border bg-white overflow-hidden rounded-lg shadow-md">
+         <section className="border-solid border bg-white overflow-hidden rounded-lg shadow-sm">
             <img
                className="h-16 w-full object-cover"
                src="https://images.unsplash.com/photo-1610208311724-72e7baf69795?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
@@ -30,7 +30,7 @@ export const LeftFeedSection: React.FC<LeftFeedSectionProps> = ({}) => {
                <img
                   style={{ transform: "translateY(-50%)" }}
                   className="inline-block h-14 w-14 rounded-full ring-2 ring-white"
-                  src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  src="https://images.unsplash.com/photo-1533518463841-d62e1fc91373?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
                   alt="avatar"
                />
             </div>
@@ -78,7 +78,7 @@ export const LeftFeedSection: React.FC<LeftFeedSectionProps> = ({}) => {
          </section>
 
          {/* Bottom card */}
-         <section className="border-solid border mt-3 rounded-lg shadow-md bg-white  ">
+         <section className="border-solid border mt-3 rounded-lg shadow-sm bg-white">
             <div className="flex p-3 ">
                <h2 className="flex-1 text-sm ">Followed hastags</h2>
                <button

@@ -8,7 +8,7 @@ export const RightFeedSection: React.FC<RightFeedSectionProps> = ({}) => {
       <div className="">
          {/*Top card  */}
          <section>
-            <div className=" bg-white border-solid border rounded-lg shadow-md ">
+            <div className=" bg-white border-solid border rounded-lg shadow-sm">
                <div className="flex p-2 text-base">
                   <h2 className="flex-1">Add to your feed</h2>
                   <button className="text-gray-600">
@@ -49,7 +49,7 @@ export const RightFeedSection: React.FC<RightFeedSectionProps> = ({}) => {
 
          {/* Middle card */}
          <section>
-            <div className="bg-white mt-3 border-solid border rounded-lg shadow-md ">
+            <div className="bg-white mt-3 border-solid border rounded-lg shadow-sm ">
                <div className="flex p-2 text-base">
                   <h2 className="flex-1">Today’s most viewed courses</h2>
                   <button className="text-gray-600">
@@ -83,7 +83,7 @@ export const RightFeedSection: React.FC<RightFeedSectionProps> = ({}) => {
          {/* Bottom Section */}
          <section className="sticky top-2">
             {/* img */}
-            <div className="bg-white mt-3 border-solid border rounded-lg shadow-md overflow-hidden p-2 cursor-pointer">
+            <div className="bg-white mt-3 border-solid border rounded-lg shadow-sm overflow-hidden p-2 cursor-pointer">
                <img
                   className="w-full object-cover"
                   src="https://static-exp1.licdn.com/scds/common/u/images/promo/ads/li_evergreen_jobs_ad_300x250_v1.jpg"

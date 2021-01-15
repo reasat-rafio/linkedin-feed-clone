@@ -35,7 +35,10 @@ export const Navbar: React.FC<NavbarProps> = ({ pageWidth }) => {
 
          <div className="">
             <div className="flex">
-               <img src="https://img.icons8.com/fluent/48/000000/linkedin.png" />
+               <a href="/">
+                  <img src="https://img.icons8.com/fluent/48/000000/linkedin.png" />
+               </a>
+
                <div className="search-input">
                   <svg
                      onClick={handleInputRefClick}
@@ -167,7 +170,7 @@ export const Navbar: React.FC<NavbarProps> = ({ pageWidth }) => {
                      <div className="relative">
                         <img
                            className="inline-block h-7 w-7 rounded-full ring-2 ring-white"
-                           src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                           src="https://images.unsplash.com/photo-1533518463841-d62e1fc91373?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
                            alt=""
                         />
                         <button className="relative m-auto z-10 block rounded bg-white focus:outline-none">

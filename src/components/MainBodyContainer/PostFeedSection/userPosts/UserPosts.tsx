@@ -1,26 +1,41 @@
-import React from "react";
+import { Actions } from "./Data";
 
-interface UserPostsProps {}
+interface UserPostsProps {
+   userName: string;
+   userImage: any;
+   postPosition: string;
+   userTitle: string;
+   days: string;
+   postBodyText: string;
+   postImage: any;
+   likeCounts: string;
+   commentCounts: string;
+}
 
-export const UserPosts: React.FC<UserPostsProps> = ({}) => {
+export const UserPosts: React.FC<UserPostsProps> = ({
+   userName,
+   userImage,
+   postPosition,
+   userTitle,
+   days,
+   postImage,
+   postBodyText,
+   likeCounts,
+   commentCounts,
+}) => {
    return (
       <div className="bg-gray-100 pt-3 flex items-center justify-center">
          <div className="bg-white border shadow-sm px-4 py-3 rounded-lg ">
             <div className="flex items-center">
-               <img
-                  className="h-12 w-12 rounded-full"
-                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-               />
+               {userImage}
                <div className="ml-2">
                   <div className="text-sm ">
-                     <span className="font-semibold">Dallin Baumbach</span>
-                     <span className="text-gray-500"> • 1st</span>
+                     <span className="font-semibold">{userName}</span>
+                     <span className="text-gray-500">{postPosition}</span>
                   </div>
-                  <div className="text-gray-500 text-xs ">
-                     Software Engineer at Tesla, Inc
-                  </div>
+                  <div className="text-gray-500 text-xs ">{userTitle}</div>
                   <div className="text-gray-500 text-xs flex">
-                     <span className="inline-block">3d • Edited • </span>
+                     <span className="inline-block">{days}</span>
                      <svg
                         className="inline-block ml-1 fill-current"
                         xmlns="http://www.w3.org/2000/svg"
@@ -37,15 +52,12 @@ export const UserPosts: React.FC<UserPostsProps> = ({}) => {
                </div>
             </div>
             <p className="text-gray-800 text-sm mt-2 leading-normal md:leading-relaxed">
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat
-               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-               sunt in culpa qui officia deserunt mollit anim id est laborum.
+               {postBodyText}
             </p>
-            <div className="text-gray-500 text-xs flex items-center mt-3">
+            <div className="mt-2"> {postImage && postImage}</div>
+
+            {/* Icons */}
+            <div className="text-gray-500 text-xs flex items-center mt-3 border-solid border-b pb-3">
                <img
                   className="mr-0.5"
                   src="https://static-exp1.licdn.com/sc/h/d310t2g24pvdy4pt1jkedo4yb"
@@ -58,8 +70,22 @@ export const UserPosts: React.FC<UserPostsProps> = ({}) => {
                   className="mr-0.5"
                   src="https://static-exp1.licdn.com/sc/h/7fx9nkd7mx8avdpqm5hqcbi97"
                />
-               <span className="ml-1">47 • 26 comments</span>
+               <span className="ml-1">
+                  {likeCounts} • {commentCounts}
+               </span>
             </div>
+            <ul className="flex mt-2">
+               {/* Like, Comment action section */}
+               {Actions.map((a, i) => (
+                  <li
+                     key={i}
+                     className="flex cursor-pointer rounded  py-3 px-2 justify-center items-center gap-2 text-gray-600 transform translate duration-75 ease-in  hover:bg-gray-500 hover:bg-opacity-10 "
+                  >
+                     <span>{a.icon}</span>
+                     <span className="font-medium text-sm">{a.title}</span>
+                  </li>
+               ))}
+            </ul>
          </div>
       </div>
    );

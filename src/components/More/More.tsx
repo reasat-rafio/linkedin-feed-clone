@@ -35,7 +35,10 @@ export const More: React.FC<MoreProps> = () => {
    const wrapperRef = useRef<any>(null);
    useOutsideAlerter(wrapperRef);
    return (
-      <section className="absolute  h-screen overflow-x-hidden  w-full bg-black bg-opacity-60 mt-10 z-30">
+      <section
+         className="fixed w-full h-100 inset-0 overflow-hidden mt-10 z-30 "
+         style={{ background: "rgba(0,0,0,.7)" }}
+      >
          <motion.div
             className="absolute right-0 w-96  h-full rounded-lg bg-white  shadow-xl overflow-scroll"
             initial="exit"

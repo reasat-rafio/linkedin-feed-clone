@@ -35,7 +35,7 @@ export const Modal: React.FC<ModalProps> = ({}) => {
    return (
       <>
          <div
-            className="main-modal fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster"
+            className="main-modal fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center "
             style={{ background: "rgba(0,0,0,.7)" }}
          >
             <motion.div
