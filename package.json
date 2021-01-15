@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "postcss": "^8.2.4",
+    "postcss-import": "^14.0.0",
     "postcss-preset-env": "^6.7.0",
     "stylelint-config-recommended": "^3.0.0",
     "tailwindcss": "^2.0.2"
