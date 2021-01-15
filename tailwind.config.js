@@ -16,7 +16,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-   purge: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
+   purge: ["./src/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
    theme: {
       // good to know: add default line height https://tailwindcss.com/docs/font-size#app
       extend: {
