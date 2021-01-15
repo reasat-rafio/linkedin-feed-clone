@@ -1,5 +1,5 @@
 import { Layout } from "../components/Layout/Layout";
-import "../styles/globals.css";
+import "../styles/tailwind.css";
 import { AnimatePresence } from "framer-motion";
 import { GlobalProvider } from "../store/GlobalStore";
 
