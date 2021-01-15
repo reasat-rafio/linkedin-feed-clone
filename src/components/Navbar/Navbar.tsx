@@ -37,11 +37,6 @@ export const Navbar: React.FC<NavbarProps> = ({ pageWidth }) => {
       dispatch({ type: "ACTIVEE_MOBILE_NAV" });
    };
 
-   // Sm Nav action
-   const smNavbarClose = () => {
-      dispatch({ type: "DEACTIVE_MOBILE_NAV" });
-   };
-
    return (
       <nav className="lg:w-3/4 m-auto flex items-center ">
          {/* Logo & Search input */}
