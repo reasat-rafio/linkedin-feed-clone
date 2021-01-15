@@ -6,6 +6,7 @@ const Store = createContext(null);
 const initalState = {
    openMore: false,
    openModal: false,
+   openMobileNav: false,
 };
 
 export const GlobalProvider = ({ children }) => {

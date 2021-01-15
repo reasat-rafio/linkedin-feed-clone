@@ -10,10 +10,29 @@ export const Reducer = (state, action: actionInterface) => {
             ...state,
             openMore: !state.openMore,
          };
+
       case "TOGGLE_MODAL":
          return {
             ...state,
             openModal: !state.openModal,
+         };
+
+      case "TOGGLE_MOBILE_NAV":
+         return {
+            ...state,
+            openMobileNav: !state.openMobileNav,
+         };
+
+      case "ACTIVEE_MOBILE_NAV":
+         return {
+            ...state,
+            openMobileNav: true,
+         };
+
+      case "DEACTIVE_MOBILE_NAV":
+         return {
+            ...state,
+            openMobileNav: false,
          };
 
       default:

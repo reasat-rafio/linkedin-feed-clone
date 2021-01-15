@@ -33,7 +33,7 @@ export const More: React.FC<MoreProps> = () => {
    };
 
    const wrapperRef = useRef<any>(null);
-   useOutsideAlerter(wrapperRef);
+   useOutsideAlerter(wrapperRef, "TOGGLE_MORE");
    return (
       <section
          className="fixed w-full h-100 inset-0 overflow-hidden mt-10 z-30 "
