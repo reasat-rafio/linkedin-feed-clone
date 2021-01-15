@@ -11,12 +11,12 @@ export const MessageInboxFull: React.FC<MessageInboxProps> = ({}) => {
 
    // Framer motion animation variant
    const BoxVariants = {
-      exit: { y: 150, opacity: 0, transition: { duration: 0.5 } },
+      exit: { y: 150, transition: { duration: 0.4 } },
       enter: {
          y: 0,
-         opacity: 1,
          transition: {
-            duration: 0.5,
+            type: "spring",
+            duration: 0.4,
          },
       },
    };
@@ -70,7 +70,7 @@ export const MessageInboxFull: React.FC<MessageInboxProps> = ({}) => {
             </div>
             <ul className="p-3">
                {Message.map((m, i) => (
-                  <li className="grid grid-cols-9 mb-4">
+                  <li key={i} className="grid grid-cols-9 mb-4">
                      <span className="col-span-2 m-auto">{m.img}</span>
                      <div className="col-span-7 border-solid border-b">
                         <span className="block text-sm">{m.name}</span>

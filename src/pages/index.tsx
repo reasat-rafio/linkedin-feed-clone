@@ -5,7 +5,7 @@ export default function Home() {
    return (
       <div className="bg-gray-100">
          <Head>
-            <title>Linked In</title>
+            <title>Feed | LinkedIn</title>
             <link rel="icon" href="/favicon.ico" />
          </Head>
 

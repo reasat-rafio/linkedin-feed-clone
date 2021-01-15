@@ -24,7 +24,6 @@ export const Navbar: React.FC<NavbarProps> = ({ pageWidth }) => {
       state: { openMobileNav },
       dispatch,
    } = useCtx();
-   console.log(openMobileNav);
 
    const handleToggleMore = () => {
       dispatch({
