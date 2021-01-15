@@ -1,7 +1,7 @@
 import { RiBookmarkFill } from "react-icons/ri";
 import { AiOutlineArrowUp, AiOutlineArrowDown } from "react-icons/ai";
 import { useRef, useState, useEffect } from "react";
-import { Recent, recentHastags } from "./Recent";
+import { Recent, recentHastags } from "./Data";
 import { HelperFn } from "./HelperFn";
 
 interface LeftFeedSectionProps {}

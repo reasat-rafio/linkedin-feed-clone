@@ -34,15 +34,17 @@ export const Modal: React.FC<ModalProps> = ({}) => {
 
    return (
       <>
-         <motion.div
-            initial="exit"
-            animate="enter"
-            exit="exit"
-            variants={ModalVariants}
+         <div
             className="main-modal fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster"
             style={{ background: "rgba(0,0,0,.7)" }}
          >
-            <div className="border border-teal-500 smodal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+            <motion.div
+               initial="exit"
+               animate="enter"
+               exit="exit"
+               variants={ModalVariants}
+               className="border border-teal-500 smodal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto"
+            >
                <div className="modal-content py-4 text-left px-6">
                   <div className="flex justify-between items-center pb-3 border-solid border-b-2">
                      <p className="text-2xl ">Create a post</p>
@@ -70,8 +72,8 @@ export const Modal: React.FC<ModalProps> = ({}) => {
                      </p>
                   </div>
                </div>
-            </div>
-         </motion.div>
+            </motion.div>
+         </div>
       </>
    );
 };

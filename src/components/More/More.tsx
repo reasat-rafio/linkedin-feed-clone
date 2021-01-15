@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useCtx } from "../../store/GlobalStore";
 import { useOutsideAlerter } from "../../utils/useOutSideAlerter";
-import { Icons, Servicrs } from "./Utils";
+import { Icons, Servicrs } from "./Data";
 
 interface MoreProps {}
 

@@ -1,6 +1,6 @@
 interface RightFeedSectionProps {}
 import { BsFillInfoSquareFill } from "react-icons/bs";
-import { addToYourFeed, mostViewdCourse, Navs } from "./Utils";
+import { addToYourFeed, mostViewdCourse, Navs } from "./Data";
 import { AiOutlinePlus } from "react-icons/ai";
 
 export const RightFeedSection: React.FC<RightFeedSectionProps> = ({}) => {

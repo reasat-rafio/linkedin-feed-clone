@@ -1,7 +1,6 @@
 import { PostFeedSection } from "./PostFeedSection/PostFeedSection";
 import { RightFeedSection } from "./RightFeedSection/RightFeedSection";
 import { LeftFeedSection } from "./LeftFeed/LeftFeedSection";
-import { useResize } from "../../utils/useResizer";
 import { useMediaQuery } from "../../utils/useMediaQuery";
 
 interface MainBodyContainerProps {}
@@ -11,7 +10,7 @@ export const MainBodyContainer: React.FC<MainBodyContainerProps> = ({}) => {
    console.log(isBreakpoint);
 
    return (
-      <div className="grid grid-cols-10 gap-4">
+      <div className={`${!isBreakpoint && "grid grid-cols-10 gap-4"}`}>
          {!isBreakpoint && (
             <section className="md:block md:col-span-2 sm:hidden ">
                <LeftFeedSection />

@@ -1,6 +1,6 @@
 import { IoCreateOutline } from "react-icons/io5";
 import { useCtx } from "../../../../store/GlobalStore";
-import { Activites } from "../utils";
+import { Activites } from "../Data";
 interface PostInputProps {}
 
 export const PostInput: React.FC<PostInputProps> = ({}) => {
@@ -25,7 +25,7 @@ export const PostInput: React.FC<PostInputProps> = ({}) => {
                   Start a post
                </div>
             </div>
-            <ul className="flex justify-evenly items-center pt-2 gap-5 ">
+            <ul className="flex justify-evenly items-center pt-2 ">
                {Activites.map(({ icon, title }, i) => (
                   <li
                      key={i}

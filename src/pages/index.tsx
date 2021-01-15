@@ -12,8 +12,6 @@ export default function Home() {
          <main className="pt-20 xl:w-3/4 m-auto p-3">
             <MainBodyContainer />
          </main>
-
-         <footer></footer>
       </div>
    );
 }
